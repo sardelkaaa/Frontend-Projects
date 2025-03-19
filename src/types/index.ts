@@ -69,7 +69,7 @@ export interface IBusketState {
 
 export interface IOrderState {
     id: string;
-    total: number | string;
+    total: number | null;
     setPayment(payment: string): void;
     setEmail(email: string): void;
     setField(field: keyof TOrderInput, value: string): void;
