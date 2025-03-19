@@ -50,6 +50,10 @@ yarn build
 
 - Presenter (Презентер): Управляет взаимодействием между Model и View.
 
+### Uml-диаграмма
+![jLRDRYGr4BxFKrYvC41ouDeQ3Hl2h5WfqOusirmG1yUkJ4pSTijs3unOf5tWm8qtu1bMQ8EMduHNw7uZx75NUcow4Jbif9buN9-hllfSPVkHTTIukfIJzqZpI_Dt-xAvQTxupv_-SzkyRMw8_xfjlszksfVjZtxoz_PLSzVywgT9yuU7lMvVnPc9K0xC9ML0dYpf6iYt4-B_FcIw3eQ2gB](https://github.com/user-attachments/assets/1f0bcc0c-e112-48f5-9dfc-6ca7e14a776b)
+
+
 ### Основные компоненты
 - AppState - Управляет состоянием приложения. Взаимодействует с API для получения данных о продуктах и создания заказов.
 
