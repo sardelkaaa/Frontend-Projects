@@ -28,7 +28,7 @@ export interface IOrderForm {
 }
 
 export interface IOrder extends IOrderForm {
-    items: IProduct[];
+    items: string[]; 
     total: number | null;
 }
 
@@ -59,20 +59,20 @@ export interface IAppState {
 export interface IBusketState {
     products: TProductBusket[];
     addProduct(product: IProduct): void;
-    removeProduct(id: string): void;
+    removeProduct(product: TProductBusket): void;
     getTotalPrice(): number | null;
     getTotalCount(): number;
-    getBusketProducts(): IProduct[];
     clear(): void;
     placeOrder(order: IOrderState): void;
 }
 
 export interface IOrderState {
-    id: string;
-    total: number | null;
-    setPayment(payment: string): void;
+    order: IOrder;
+    formErrors: TFormErrors;
+    setPayment(payment: TPayment): void;
     setEmail(email: string): void;
     setField(field: keyof TOrderInput, value: string): void;
+    setField(field: keyof IOrder, value: IOrder[keyof IOrder]): void;
     isOrderSuccess(): boolean;
     clearOrder(): void;
 }
@@ -101,6 +101,8 @@ export type TOrderInput = Pick<IOrder, 'payment' | 'address' | 'email' | 'phone'
 export type TFormErrors = Partial<Record<keyof IOrder, string>>;
 
 export type TPaymentAndAddress = Pick<IOrder, 'payment' | 'address'>;
+
+export type TContacts = Pick<IOrder, 'email' | 'phone'>;
 
 export type TPayment = 'card' | 'cash';
 
