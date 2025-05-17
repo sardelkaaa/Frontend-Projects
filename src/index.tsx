@@ -4,7 +4,10 @@ import clsx from 'clsx';
 
 import { Article } from './components/article/Article';
 import { ArticleParamsForm } from './components/article-params-form/ArticleParamsForm';
-import { ArticleStateType, defaultArticleState } from './constants/articleProps';
+import {
+	ArticleStateType,
+	defaultArticleState,
+} from './constants/articleProps';
 
 import './styles/index.scss';
 import styles from './styles/index.module.scss';
@@ -16,7 +19,7 @@ const App = () => {
 	const [styleState, setStyleState] = useState(defaultArticleState);
 	const changeStyle = (state: ArticleStateType) => {
 		setStyleState(state);
-	}
+	};
 	const onArticleClicked = () => {};
 	return (
 		<div
@@ -30,8 +33,11 @@ const App = () => {
 					'--bg-color': styleState.backgroundColor.value,
 				} as CSSProperties
 			}>
-			<ArticleParamsForm defaultArticleState={defaultArticleState} changeArticleState={changeStyle} />
-			<Article onClick={onArticleClicked}/>
+			<ArticleParamsForm
+				defaultArticleState={defaultArticleState}
+				changeArticleState={changeStyle}
+			/>
+			<Article onClick={onArticleClicked} />
 		</div>
 	);
 };

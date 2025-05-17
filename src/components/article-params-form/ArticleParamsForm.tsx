@@ -92,7 +92,13 @@ export const ArticleParamsForm = ({
 					[styles.container_open]: state.opened,
 				})}>
 				<form className={styles.form} onSubmit={onSubmit}>
-					<Text children='Задайте параметры' as='h2' size={31} uppercase weight={800} />
+					<Text
+						children='Задайте параметры'
+						as='h2'
+						size={31}
+						uppercase
+						weight={800}
+					/>
 					<Spacing size={50} />
 					<Select
 						title='Шрифт'

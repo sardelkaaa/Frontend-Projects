@@ -8,24 +8,23 @@ import styles from './ArrowButton.module.scss';
 export type OnClick = () => void;
 
 export type TArrowButtonProps = {
-	opened: boolean,
-	onClick?: OnClick
-}
+	opened: boolean;
+	onClick?: OnClick;
+};
 
-export const ArrowButton = ({onClick, opened} : TArrowButtonProps) => {
+export const ArrowButton = ({ onClick, opened }: TArrowButtonProps) => {
 	return (
 		/* Не забываем указаывать role и aria-label атрибуты для интерактивных элементов */
 		<div
 			role='button'
 			aria-label='Открыть/Закрыть форму параметров статьи'
 			tabIndex={0}
-			className={clsx(styles.container, {[styles.container_open]: opened})}
-			onClick={onClick}
-		>
+			className={clsx(styles.container, { [styles.container_open]: opened })}
+			onClick={onClick}>
 			<img
 				src={arrow}
 				alt='иконка стрелочки'
-				className={clsx(styles.arrow, {[styles.arrow_open]: opened})}
+				className={clsx(styles.arrow, { [styles.arrow_open]: opened })}
 			/>
 		</div>
 	);
